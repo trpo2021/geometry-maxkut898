@@ -52,7 +52,7 @@ vector<string> split(string &str, string sep) {
 string takeFigure(string &s) {
     int begin = s.find("(");
 
-    for (int i = 0; i < size(s); i++)
+    for (int i = 0; i < s.size(); i++)
     {
         s[i] = tolower(s[i]);                      //приводим к одному регистру(строчный)
     }
@@ -143,7 +143,7 @@ vector<float> createTriangle(string &str) {
 int main()
 {
     setlocale(LC_CTYPE, "Russian");
-    vector<pair<string, vector<float>>> figures;
+    vector<pair<string, vector<float> > > figures;
     string s;
     int count = 1;
 
@@ -167,7 +167,7 @@ int main()
             error(1, 0);
         }
 
-        pair<string, vector<float>> figure;
+        pair<string, vector<float> > figure;
 
         if (figurePoints.size() > 0) {
             figure.first = figureName;
